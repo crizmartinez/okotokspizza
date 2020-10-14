@@ -9,3 +9,27 @@ section {
     display: inline-block;
 }
     
+body h1 {
+    color: pink
+}
+
+div > a {
+    font-style: italic;
+}
+
+footer + a {
+    font-size: 2rem; color: lime;
+}
+
+a:link {
+    color: lime;
+}
+a:visited {
+    color: magenta;
+}
+a:hover {
+    font-weight: bold;
+}
+a:active {
+    background-color: mediumaquamarine;
+}
