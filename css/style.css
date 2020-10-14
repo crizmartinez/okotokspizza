@@ -1,3 +1,11 @@
-image {
-    display: block;
+.pizza-photo {
+  width: 400px;  
 }
+div {
+    text-align: center;
+}   
+section {
+    text-align: center;
+    display: inline-block;
+}
+    
