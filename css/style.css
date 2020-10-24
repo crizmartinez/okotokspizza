@@ -1,3 +1,83 @@
+/* colors
+    #6ca540
+    #56732e
+
+    */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header,
+main,
+footer {
+    padding: .5rem;
+}
+
+.grid-contaner {
+    display: grid;
+    grid-template-rows: 60px 1fr 30px;
+    min-height: 100vh;    
+}
+
+.photo {
+    max-width: 100%;
+}
+
+.header  {
+    background-color: #56732e;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 0;
+    text-align: center;
+    padding: 30px;
+}
+.main {
+    background-color: white;
+}
+
+.footer {
+    background-color: #56732e;
+}
+
+.aboutus {
+    text-align: center;
+}
+/* TABLET RULES */
+@media only screen and (max-width: 768px) {
+    .photo {
+        max-width: 50%;
+        float: left;
+        margin: .5rem;
+    }
+    
+}
+/* DESKTOP RULES */
+@media only screen and (min-width: 991px) {
+
+    .grid-contaner {
+        grid-template-rows: 120px 1fr 30px;
+    }
+
+    main button {
+        display: none;
+    }
+}
+/* PRINT RULES */
+@media print {
+
+    body {
+        color: black;        
+    }
+}
+
+
+
+
+/*  
 .pizza-photo {
   width: 400px;  
 }
@@ -33,3 +113,4 @@ a:hover {
 a:active {
     background-color: mediumaquamarine;
 }
+*/
