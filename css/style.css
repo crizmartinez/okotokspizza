@@ -1,116 +1,53 @@
-/* colors
-    #6ca540
-    #56732e
-
-    */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-header,
-main,
-footer {
-    padding: .5rem;
-}
-
 .grid-contaner {
-    display: grid;
-    grid-template-rows: 60px 1fr 30px;
-    min-height: 100vh;    
+  display: -ms-grid;
+  display: grid;
 }
 
-.photo {
-    max-width: 100%;
+.grid-contaner .header {
+  font-display: grid;
+  min-height: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.header  {
-    background-color: #56732e;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 0;
-    text-align: center;
-    padding: 30px;
-}
-.main {
-    background-color: white;
-}
-
-.footer {
-    background-color: #56732e;
-}
-
-.aboutus {
-    text-align: center;
-}
-/* TABLET RULES */
-@media only screen and (max-width: 768px) {
-    .photo {
-        max-width: 50%;
-        float: left;
-        margin: .5rem;
-    }
-    
-}
-/* DESKTOP RULES */
-@media only screen and (min-width: 991px) {
-
-    .grid-contaner {
-        grid-template-rows: 120px 1fr 30px;
-    }
-
-    main button {
-        display: none;
-    }
-}
-/* PRINT RULES */
-@media print {
-
-    body {
-        color: black;        
-    }
-}
-
-
-
-
-/*  
 .pizza-photo {
-  width: 400px;  
+  width: 400px;
 }
+
 div {
-    text-align: center;
-}   
-section {
-    text-align: center;
-    display: inline-block;
+  text-align: center;
 }
-    
-body h1 {
-    color: pink
+
+section {
+  text-align: center;
+  display: inline-block;
+}
+
+body {
+  font: Helvetica, sans-serif;
+  background-color: #56732e;
+}
+
+h1 {
+  color: yellow;
+  font-size: 30px;
 }
 
 div > a {
-    font-style: italic;
+  font-style: italic;
+  color: darkred;
 }
 
-footer + a {
-    font-size: 2rem; color: lime;
+.footer a {
+  font-size: 2rem;
+  color: darkred;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-a:link {
-    color: lime;
-}
-a:visited {
-    color: magenta;
-}
-a:hover {
-    font-weight: bold;
-}
-a:active {
-    background-color: mediumaquamarine;
-}
-*/
+/*# sourceMappingURL=style.css.map */
