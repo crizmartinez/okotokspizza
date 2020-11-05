@@ -1,184 +1,73 @@
 /*COLOR
-
+deep red rgb(94, 40, 40)
+Light red rgb(201, 163, 163)
+Hover red light rgb(224, 209, 209);
 */
 /* GLOBAL STYLES */
-
-
-body {
-    margin: 0;
-    font-family:'Montserrat', sans-serif;
-    background-color: rgb(253, 253, 253);
-}
- 
-a {
-    color: #000;
-}
-/* HEADER */
-.header {
-    background-color: rgb(94, 40, 40);
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-}
-
-.header ul {
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: rgb(201, 163, 163);
 }
 
-.header li a {
-    display: block;
-    padding: 20px 20px;  
-    border-right: 1px solid rgb(7, 7, 7);
-    text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-    background-color: rgb(224, 209, 209);
-}
-
-.header .logo {
-    display: block;
-    display: left;
-    font-size: 2em;
-    width: 180px;
-    padding: 10px 10px;
-    text-decoration: none;
-}
-/* MENU */
-.header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s  ease-out;
-}
-/* MENU ICON */
-.header .menu-icon {
-    cursor: pointer;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-
-.header .menu-icon .nav-icon {
-    background: black;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-.header .menu-icon .nav-icon:before,
-.header .menu-icon .nav-icon:after {
-    background: rgb(12, 12, 12);
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-}
-
-.header .menu-icon .nav-icon:before {
-    top: 5px;
-}
-
-.header .menu-icon .nav-icon:after {
-       top: -5px;
-}
-
-/* MENU BUTTON */
-.header .menu-btn {
-    display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-    max-height: 240px;  
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-    background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-    transform: rotate(-45deg);
-    top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-    transform: rotate(45deg);
-    top: 0;
-}
-
-@media (min-width:768px) {
-    .header li {
-        float: left;
-    }
-    .header li a {
-        padding: 20px 30px;
-    }
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .header .menu-icon {
-        display: none;
-    }
-}
-
-
-
-
-
-
-    /*  
-
-body {
-    background-color: black;
-    font-family:'Montserrat', sans-serif;
+#grid-contanier {
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-    text-decoration: none;
 }
 
-header {
-    background-color: ghostwhite;
-    padding: 1rem;
+#header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    min-height: 15vh;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(94, 40, 40);
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+
+}
+
+#content {
+    display: grid;
+    grid-template-columns: auto;
+    min-height: 85vh;
+    justify-items: center;
+    align-items: center;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: auto;
+    min-height: 10vh;
+    justify-items: center;
+    align-items: center;
 }
 .logo {
-    width: 120px;
+    width: 140px;
+    padding: 10px;  
 }
 
-
-section {
-    padding: 1rem;
+body h2  {
+    color: rgb(184, 37, 37);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
 }
 
-.banner {
-    background-image: url('../images/dough1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 90vh;
+a {
+    color: rgb(250, 248, 248);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    text-decoration: none;
+    justify-items: center;
+    align-items: center;
 }
+@media screen and (max-width: 600px) and (min-width: 401px) {
+    #gird-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-area: "g" "h" "c" "f";
 
-.container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    }
 }
-
-
-footer {
-    background-color: black;
-    color: whitesmoke;
-    text-align: center;
-    padding: .5rem;
-}
-
