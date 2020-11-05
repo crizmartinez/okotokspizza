@@ -9,6 +9,7 @@ Hover red light rgb(224, 209, 209);
     padding: 0;
 }
 
+
 #grid-contanier {
     display: grid;
     font-family: 'Montserrat', sans-serif;
@@ -21,11 +22,14 @@ Hover red light rgb(224, 209, 209);
     min-height: 15vh;
     justify-items: center;
     align-items: center;
-    background-color: rgb(94, 40, 40);
+    background-color: rgb(10, 10, 10);
     text-decoration: none;
     color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
     line-height: 1.4;
+    padding: 20px;
 
 }
 
@@ -39,10 +43,16 @@ Hover red light rgb(224, 209, 209);
 
 #footer {
     display: grid;
-    grid-template-columns: auto;
-    min-height: 10vh;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: 100%;
+    background-color: rgb(10, 10, 10);
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 10px;
+
+
 }
 .logo {
     width: 140px;
@@ -63,6 +73,18 @@ a {
     justify-items: center;
     align-items: center;
 }
+
+.chef {
+   background-color: black;
+}
+
+.dough {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
 @media screen and (max-width: 600px) and (min-width: 401px) {
     #gird-container {
         display: grid;
