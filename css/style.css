@@ -1,152 +1,40 @@
-/*COLOR
-deep red rgb(94, 40, 40)
-Light red rgb(201, 163, 163)
-Hover red light rgb(224, 209, 209);
-*/
-/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-#grid-contanier {
-  display: -ms-grid;
-  display: grid;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.4;
+nav {
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: black;
+  padding: 16px;
+  line-height: 1.5;
 }
 
-#header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  min-height: 15vh;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #0a0a0a;
+nav ul {
+  text-align: right;
+}
+
+nav ul li a {
   text-decoration: none;
   color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.4;
-  padding: 20px;
-}
-
-#content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  min-height: 85vh;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  background-color: #0a0a0a;
-  text-decoration: none;
-  color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  line-height: 1.4;
-  padding: 10px;
+  text-align: right;
 }
 
 .logo {
-  width: 140px;
-  padding: 10px;
-}
-
-body h2 {
-  color: #b82525;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.4;
-}
-
-a {
-  color: #faf8f8;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.4;
-  text-decoration: none;
-  justify-items: center;
+  width: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.chef {
-  background-color: black;
-}
-
-.dough {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* MENU PAGE CSS */
-.menu-banner {
-  background-image: url(../images/dough1.jpg);
-  background-size: 80%;
-  background-position: center;
-  min-height: 300px;
-}
-
-.menu-banner, h3, a {
-  display: -ms-grid;
-  display: grid;
-  color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.2;
-  text-decoration: none;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  padding: 15px;
-}
-
-.specials .special-items-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-gap: .5rem;
-}
-
-.specials .special-items-container .special-photo {
+.banner {
+  background-image: url(/images/deal.jpg);
   background-size: cover;
-  background-position: center center;
-  width: 75%;
-  height: 200px;
-}
-
-@media only screen and (min-width: 991px) {
-  .specials .special-items-container {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) and (min-width: 401px) {
-  #gird-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-area: "g" "h" "c" "f";
-  }
+  background-position: top center;
+  min-height: 70vh;
 }
 /*# sourceMappingURL=style.css.map */
