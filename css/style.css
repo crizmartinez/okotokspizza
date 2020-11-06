@@ -5,91 +5,148 @@ Hover red light rgb(224, 209, 209);
 */
 /* GLOBAL STYLES */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 #grid-contanier {
-    display: grid;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.4;
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
 }
 
 #header {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-    min-height: 15vh;
-    justify-items: center;
-    align-items: center;
-    background-color: rgb(10, 10, 10);
-    text-decoration: none;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    padding: 20px;
-
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  min-height: 15vh;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  padding: 20px;
 }
 
 #content {
-    display: grid;
-    grid-template-columns: auto;
-    min-height: 85vh;
-    justify-items: center;
-    align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  min-height: 85vh;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer {
-    display: grid;
-    grid-template-columns: 100%;
-    background-color: rgb(10, 10, 10);
-    text-decoration: none;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 10px;
-
-
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 10px;
 }
+
 .logo {
-    width: 140px;
-    padding: 10px;  
+  width: 140px;
+  padding: 10px;
 }
 
-body h2  {
-    color: rgb(184, 37, 37);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.4;
+body h2 {
+  color: #b82525;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
 }
 
 a {
-    color: rgb(250, 248, 248);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.4;
-    text-decoration: none;
-    justify-items: center;
-    align-items: center;
+  color: #faf8f8;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+  text-decoration: none;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .chef {
-   background-color: black;
+  background-color: black;
 }
 
 .dough {
-    display: grid;
-    justify-items: center;
-    align-items: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
+/* MENU PAGE CSS */
+.menu-banner {
+  background-image: url(../images/dough1.jpg);
+  background-size: 80%;
+  background-position: center;
+  min-height: 300px;
+}
+
+.menu-banner, h3, a {
+  display: -ms-grid;
+  display: grid;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  text-decoration: none;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding: 15px;
+}
+
+.specials .special-items-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: .5rem;
+}
+
+.specials .special-items-container .special-photo {
+  background-size: cover;
+  background-position: center center;
+  width: 75%;
+  height: 200px;
+}
+
+@media only screen and (min-width: 991px) {
+  .specials .special-items-container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 @media screen and (max-width: 600px) and (min-width: 401px) {
-    #gird-container {
-        display: grid;
+  #gird-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-area: "g" "h" "c" "f";
-
-    }
+    grid-area: "g" "h" "c" "f";
+  }
 }
+/*# sourceMappingURL=style.css.map */
