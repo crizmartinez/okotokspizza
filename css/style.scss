@@ -5,17 +5,25 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(196, 182, 182);
+}
+
 nav {
-    display: block;
-    list-style-type: none;
+    margin: auto;
+    text-decoration: none;
     overflow: hidden;
-    background-color: black;
+    background-color: rgb(172, 146, 146);
     padding: 16px;
     line-height: 1.5;
     
     ul {
-        // text-align: right;
-    
+        list-style: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+       
     li a {
         text-decoration: none;
         color: whitesmoke;
@@ -26,7 +34,7 @@ nav {
 
 .logo {
     width: 120px;
-   
+}
 
 .banner {
     background-image: url(/images/deal.jpg);
@@ -34,7 +42,72 @@ nav {
     background-position:  top center;
     min-height: 70vh;
 }
+.chef {
+    width: 380px;
+    height: auto;
+    padding: 20px 20px;
+}
 
-content h2 p {
+.female {
+        width: 380px;
+        height: auto;
+        padding: 20px 20px;
+}
+ .story {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    color: whitesmoke;
+    align-items: center;
+    justify-items: center;
     text-align: center;
+    padding: 20px 20px;
+    text-align: center;
+ }
+ .food-menu-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.25rem;
+
+    > .item {
+        background-color: rgb(253, 251, 251);
+        color: rgb(5, 5, 5);
+
+        > .image {
+            height: 200px;
+            background-size: cover;
+            background-position: center center;
+        }
+
+    }
+}
+
+
+
+// FOOTER//
+.footer {
+    display: grid;
+    grid-column-gap: 0;
+    background-color: black;
+    min-height: 10vh;
+    padding: 4vh;
+    color: whitesmoke;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+// desktop
+@media only screen and (min-width: 991px) {
+    .food-menu-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// ultrawide
+@media only screen and (min-width: 1900px) {
+    .food-menu-wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }

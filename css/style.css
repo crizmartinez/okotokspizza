@@ -5,17 +5,25 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #c4b6b6;
+}
+
 nav {
-  display: block;
-  list-style-type: none;
+  margin: auto;
+  text-decoration: none;
   overflow: hidden;
-  background-color: black;
+  background-color: #ac9292;
   padding: 16px;
   line-height: 1.5;
 }
 
 nav ul {
-  text-align: right;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 nav ul li a {
@@ -26,9 +34,6 @@ nav ul li a {
 
 .logo {
   width: 120px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .banner {
@@ -36,5 +41,80 @@ nav ul li a {
   background-size: cover;
   background-position: top center;
   min-height: 70vh;
+}
+
+.chef {
+  width: 380px;
+  height: auto;
+  padding: 20px 20px;
+}
+
+.female {
+  width: 380px;
+  height: auto;
+  padding: 20px 20px;
+}
+
+.story {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  color: whitesmoke;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.food-menu-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 0.25rem;
+}
+
+.food-menu-wrapper > .item {
+  background-color: #fdfbfb;
+  color: #050505;
+}
+
+.food-menu-wrapper > .item > .image {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 0;
+  background-color: black;
+  min-height: 10vh;
+  padding: 4vh;
+  color: whitesmoke;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 991px) {
+  .food-menu-wrapper {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .food-menu-wrapper {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */
