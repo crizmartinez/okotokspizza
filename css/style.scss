@@ -123,22 +123,43 @@ footer {
 //END OF NAV MENU//
 
 // MAIN PAGE CONTENT //
-.container {
-    display: grid;
-    justify-self: center;
-   
 
-    .h2-main {
-        color: $color-beige;
-        justify-content: center;
-        margin-top: 20px;
-    }
-    p {
-       
-    }
-
-
+h3 {
+    color: $color-beige;
+    margin-top: 10px;
+    // padding: 10px 20px 10px;
 }
+p {
+    line-height: 1.2rem;
+    align-items: center;
+}
+
+.inside {
+    width: 100%;
+    height: 50px;
+}
+.menu-container {
+    background-image: url(/images/main.jpg);
+    background-size: cover;
+    background-position: center center;
+    opacity: .8;
+    width: 100%;
+   height: 380px;
+}
+
+.our-menu {
+    text-decoration: none;
+    margin-bottom: 30px;
+    color: $color-black;
+    line-height: 1.5rem;
+}
+.h2-end {
+    padding-top: 10px;
+}
+
+
+    
+
 
 // ABOUT US PAGE// 
 .banner {
