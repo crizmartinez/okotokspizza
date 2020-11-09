@@ -5,6 +5,144 @@
           box-sizing: border-box;
 }
 
+.layout-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60px 1fr 40px;
+      grid-template-rows: 60px 1fr 40px;
+  min-height: 100vh;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  background-color: #D6BD94;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .phone {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+header .nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  position: relative;
+}
+
+header .nav .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 100vh;
+  background-color: #ffffff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: tranform 0.2s ease-in-out;
+  transition: tranform 0.2s ease-in-out;
+}
+
+header .nav .fa-bars {
+  font-size: 2rem;
+}
+
+header .nav .hamburger-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+header .nav .hamburger-button:checked ~ .menu {
+  -webkit-transform: none;
+          transform: none;
+}
+
+header .nav .hamburger-button:checked ~ .fa-bars:before {
+  content: '\f00d';
+}
+
+main {
+  background-color: #ffffff;
+}
+
+footer {
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .layout-wrapper header .nav {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .layout-wrapper header .nav button {
+    display: none;
+  }
+  .layout-wrapper header .nav .menu {
+    display: block;
+    list-style-type: none;
+  }
+  .layout-wrapper header .nav .menu > li {
+    margin: 0 1rem;
+  }
+  .layout-wrapper header .phone {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .food-menu-wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .food-menu-wrapper {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .food-menu-wrapper {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.container .h2-main {
+  color: #D6BD94;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
 .banner {
   background-image: url(/images/deal.jpg);
   background-size: cover;
@@ -126,7 +264,6 @@ li {
   padding: 0 1rem;
   background-color: #D6BD94;
   position: relative;
-  float: right;
   cursor: pointer;
   height: 30px;
   line-height: 30px;
