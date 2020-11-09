@@ -198,12 +198,13 @@ p {
 }
 
 .food-menu-wrapper {
+  background-color: #000000;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 1rem;
-  margin: 10px;
+  padding: 0 20px;
 }
 
 .food-menu-wrapper > .item {
@@ -320,14 +321,19 @@ li > ul > li:hover ul {
 }
 
 body {
-  background-color: black;
+  background-color: #000000;
   color: whitesmoke;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   line-height: 1.5rem;
 }
 
+.main-main {
+  background-color: #000000;
+}
+
 .menu-h3 {
+  background-color: #000000;
   font-size: 1.2rem;
   line-height: 1.4;
   padding: 15px;
@@ -338,6 +344,7 @@ body {
 }
 
 p {
+  background-color: #000000;
   line-height: 1.4;
   padding: 10px 20px 10px;
   text-align: center;
