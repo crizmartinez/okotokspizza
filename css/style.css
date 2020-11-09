@@ -5,37 +5,6 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: #c4b6b6;
-}
-
-nav {
-  margin: auto;
-  text-decoration: none;
-  overflow: hidden;
-  background-color: #ac9292;
-  padding: 16px;
-  line-height: 1.5;
-}
-
-nav ul {
-  list-style: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: whitesmoke;
-  text-align: right;
-}
-
-.logo {
-  width: 120px;
-}
-
 .banner {
   background-image: url(/images/deal.jpg);
   background-size: cover;
@@ -71,20 +40,148 @@ nav ul li a {
 .food-menu-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 0.25rem;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  margin: 10px;
 }
 
 .food-menu-wrapper > .item {
-  background-color: #fdfbfb;
-  color: #050505;
+  background-color: #D6BD94;
+  color: black;
+  margin: 10px 20px 0;
 }
 
 .food-menu-wrapper > .item > .image {
-  height: 200px;
+  height: 230px;
   background-size: cover;
   background-position: center center;
+}
+
+.food-menu-wrapper > .item > .image .name {
+  font-size: 2rem;
+}
+
+.menu-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  background-color: black;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;
+  height: 10vh;
+  line-height: normal;
+  padding: 10px 5px 10px;
+  width: auto;
+  text-align: center;
+}
+
+.name {
+  color: #A51818;
+  font-weight: bold;
+  padding: 8px 15px 8px;
+  font-size: 18px;
+}
+
+.description {
+  padding: 8px 15px 8px;
+  font-size: 14px;
+}
+
+.price {
+  padding: 9px;
+  font-size: 14px;
+}
+
+.dropdown {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+}
+
+.menu-logo {
+  width: 90px;
+}
+
+.dropdown {
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  padding: 1 1rem;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  position: relative;
+}
+
+.dropdown li:hover {
+  background-color: #D6BD94;
+}
+
+.dropdown > li {
+  display: inline-block;
+  padding: 0 1rem;
+  background-color: #D6BD94;
+  position: relative;
+  float: right;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  color: whitesmoke;
+}
+
+.dropdown > li:hover > ul {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background-color: #D6BD94;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li > ul {
+  display: none;
+}
+
+li > ul > li > ul {
+  position: absolute;
+  left: 120px;
+  top: 0;
+}
+
+li > ul > li:hover ul {
+  display: block;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.menu-h3 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: 15px;
+  text-align: center;
+  padding: 20px 20px 10px;
+  font-weight: bold;
+  color: #D6BD94;
+}
+
+p {
+  line-height: 1.4;
+  padding: 10px 20px 10px;
+  text-align: center;
 }
 
 .footer {
