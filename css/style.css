@@ -29,8 +29,33 @@ header .logo img {
 }
 
 header .phone {
+  text-decoration: none;
   -ms-grid-column-align: center;
       justify-self: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  color: whitesmoke;
+}
+
+header .phone > a {
+  text-decoration: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+header li > a {
+  text-decoration: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.2;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 header .nav {
@@ -45,11 +70,13 @@ header .nav .menu {
   left: 0;
   width: 160px;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #D6BD94;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: tranform 0.2s ease-in-out;
-  transition: tranform 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 header .nav .fa-bars {
@@ -76,11 +103,24 @@ header .nav .hamburger-button:checked ~ .fa-bars:before {
 }
 
 main {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 footer {
-  background-color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 0;
+  background-color: black;
+  min-height: 10vh;
+  padding: 4vh;
+  color: whitesmoke;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
 }
 
 @media only screen and (min-width: 768px) {
@@ -107,6 +147,7 @@ footer {
             order: 3;
     -ms-grid-column-align: end;
         justify-self: end;
+    text-decoration: none;
   }
   .food-menu-wrapper {
     -ms-grid-columns: (1fr)[3];
@@ -128,9 +169,22 @@ footer {
   }
 }
 
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+img.photo1 {
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+}
+
 h3 {
   color: #D6BD94;
-  margin-top: 10px;
+  margin: 10px 20px 10px;
 }
 
 p {
@@ -140,53 +194,26 @@ p {
           align-items: center;
 }
 
-.inside {
+h3.story {
+  color: #D6BD94;
+  padding-top: 20px;
+}
+
+img.chef {
   width: 100%;
-  height: 50px;
-}
-
-.menu-container {
-  background-image: url(/images/main.jpg);
-  background-size: cover;
-  background-position: center center;
-  opacity: .8;
-  width: 100%;
-  height: 380px;
-}
-
-.our-menu {
-  text-decoration: none;
-  margin-bottom: 30px;
-  color: #000000;
-  line-height: 1.5rem;
-}
-
-.h2-end {
-  padding-top: 10px;
-}
-
-.banner {
-  background-image: url(/images/deal.jpg);
-  background-size: cover;
-  background-position: top center;
-  min-height: 70vh;
-}
-
-.chef {
-  width: 380px;
   height: auto;
   padding: 20px 20px;
 }
 
-.female {
-  width: 380px;
+img.female {
+  width: 100%;
   height: auto;
   padding: 20px 20px;
 }
 
-.story {
+p.story {
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.2;
+  line-height: 1.2rem;
   color: whitesmoke;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -195,6 +222,10 @@ p {
   text-align: center;
   padding: 20px 20px;
   text-align: center;
+}
+
+iframe.video1 {
+  width: 100%;
 }
 
 .food-menu-wrapper {
@@ -348,23 +379,6 @@ p {
   line-height: 1.4;
   padding: 10px 20px 10px;
   text-align: center;
-}
-
-.footer {
-  display: -ms-grid;
-  display: grid;
-  grid-column-gap: 0;
-  background-color: black;
-  min-height: 10vh;
-  padding: 4vh;
-  color: whitesmoke;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
 }
 
 @media only screen and (min-width: 991px) {

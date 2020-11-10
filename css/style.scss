@@ -7,7 +7,7 @@ $color-white: #ffffff;
     padding: 0;
     box-sizing: border-box;
 }
-// START OF NAV BAR//
+// START OF NAV BAR////////////////////////////////
 .layout-wrapper {
     display: grid;
     grid-template-rows: 60px 1fr 40px;
@@ -19,13 +19,36 @@ header {
     background-color: $color-beige;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+    
         
     .logo img {
         height: 60px;
     }
 
     .phone {
+        text-decoration: none;
         justify-self: center;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.2;
+        color: whitesmoke;
+
+        > a {
+            text-decoration: none;
+            justify-self: center;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+    }
+    li > a {
+            text-decoration: none;
+            justify-self: center;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.2;
+            color: whitesmoke;
+            font-weight: bold;
+            margin-top: 20px;
     }
 
     .nav {
@@ -38,9 +61,9 @@ header {
             left: 0;
             width: 160px;
             height: 100vh;
-            background-color: $color-white;
+            background-color: $color-beige;
             transform: translateX(-100%);
-            transition: tranform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out;
         }
 
         .fa-bars {
@@ -69,14 +92,25 @@ header {
 }
      
 main {
-        background-color: $color-white;
+        background-color: $color-black;
 }
 
 footer {
-    background-color: $color-white;            
-}
+        display: grid;
+        grid-column-gap: 0;
+        background-color: black;
+        min-height: 10vh;
+        padding: 4vh;
+        color: whitesmoke;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.6;
+}            
 
-// BREAK POINT - TABLET//
+
+// BREAK POINT - TABLET//////////////////////////////
 @media only screen and (min-width: 768px) {
     .layout-wrapper header {
         .nav {
@@ -99,6 +133,7 @@ footer {
         .phone {
             order: 3;
             justify-self: end;
+            text-decoration: none;
         }
     }
 
@@ -107,87 +142,75 @@ footer {
     }
 }
 
-// BREAKPOINT DESKTOP//
+// BREAKPOINT DESKTOP/////////////////////////////
 @media only screen and (min-width: 991px) {
     .food-menu-wrapper {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-// BREAKPOINT ULTRAWIDE //
+// BREAKPOINT ULTRAWIDE ///////////////////////
 @media only screen and (min-width: 1900px) {
     .food-menu-wrapper {
         grid-template-columns: repeat(6, 1fr);
     }
 }
-//END OF NAV MENU//
+//END OF NAV MENU/////////////////////////////
 
-// MAIN PAGE CONTENT //
+// MAIN PAGE CONTENT ////////////////////////
+.container {
+    display: grid;
+}
 
+img.photo1 {
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+}
 h3 {
     color: $color-beige;
-    margin-top: 10px;
+    margin: 10px 20px 10px
     // padding: 10px 20px 10px;
 }
 p {
     line-height: 1.2rem;
     align-items: center;
+    // margin: 10px 20px 10px
 }
 
-.inside {
-    width: 100%;
-    height: 50px;
-}
-.menu-container {
-    background-image: url(/images/main.jpg);
-    background-size: cover;
-    background-position: center center;
-    opacity: .8;
-    width: 100%;
-   height: 380px;
-}
+// ABOUT US PAGE///////////////////
 
-.our-menu {
-    text-decoration: none;
-    margin-bottom: 30px;
-    color: $color-black;
-    line-height: 1.5rem;
+h3.story {
+    color: $color-beige;
+    padding-top: 20px;
+
 }
-.h2-end {
-    padding-top: 10px;
-}
-
-
-    
-
-
-// ABOUT US PAGE// 
-.banner {
-    background-image: url(/images/deal.jpg);
-    background-size: cover;
-    background-position:  top center;
-    min-height: 70vh;
-}
-.chef {
-    width: 380px;
+img.chef {
+    width:100%;
     height: auto;
     padding: 20px 20px;
 }
 
-.female {
-        width: 380px;
-        height: auto;
-        padding: 20px 20px;
+img.female {
+    width:100%;
+    height: auto;
+    padding: 20px 20px;
 }
- .story {
+
+ p.story {
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
+    line-height: 1.2rem;
     color: whitesmoke;
     align-items: center;
     justify-items: center;
     text-align: center;
     padding: 20px 20px;
     text-align: center;
+ }
+ iframe.video1 {
+     width: 100%;
  }
 //  ABOUT US PAGE BOTTOM //
 
@@ -340,20 +363,6 @@ p {
 // BOTTOM OF MENU PAGE//
 
 
-// FOOTER//
-.footer {
-    display: grid;
-    grid-column-gap: 0;
-    background-color: black;
-    min-height: 10vh;
-    padding: 4vh;
-    color: whitesmoke;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-}
 
 // desktop
 @media only screen and (min-width: 991px) {
