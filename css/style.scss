@@ -210,13 +210,14 @@ p {
 
 // -- TOP OF MENU PAGE-- //
  .food-menu-wrapper {
+     background-color: $color-black;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-    margin: 10px;
+    padding: 0 20px;
 
     > .item {
-        background-color: #D6BD94;
+        background-color: $color-beige;
         color: black;
         margin: 10px 20px 0;
 
@@ -305,7 +306,7 @@ li {
     top: 30px;
     left: 0;
     right: 0;
-    background-color: #D6BD94;
+    background-color: $color-beige;
 }
 
 ul {
@@ -327,14 +328,17 @@ li > ul > li:hover ul {
 }
 // Font Styles//
 body {
-    background-color: black;
+    background-color: $color-black;
     color: whitesmoke;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     line-height: 1.5rem;
 }
-
+.main-main{
+    background-color: $color-black;
+}
 .menu-h3 {
+    background-color: $color-black;
     font-size: 1.2rem;
     line-height: 1.4;
     padding: 15px;
@@ -344,6 +348,7 @@ body {
     color: #D6BD94;
 }
 p {
+    background-color: $color-black;
     line-height: 1.4;
     padding: 10px 20px 10px;
     text-align: center;
