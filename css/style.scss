@@ -1,3 +1,4 @@
+// COLORS//
 $color-beige: #D6BD94;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -90,11 +91,11 @@ header {
         }
     }
 }
-     
+// MAIN BODY STYLE// 
 main {
-        background-color: $color-beige;
+        background-color: $color-black;
 }
-
+//  FOOTER STYLE
 footer {
     display: grid;
     grid-column-gap: 0;
@@ -108,6 +109,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;            
 }
+// END OF MAIN/////////////////////////////////////////////////
 
 // BREAK POINT - TABLET////////////////////////////////////////////////
 @media only screen and (min-width: 768px) {
@@ -117,11 +119,13 @@ footer {
             justify-self: center;
 
             button {
-                display: none;
+                justify-content: center;
             }
             .menu {
                 display: block;
                 list-style-type: none;
+                padding-top: 40px;
+                line-height: 1.9rem;
 
                 >li {
                     margin: 0 1rem;
@@ -156,6 +160,7 @@ footer {
 }
 //END OF NAV MENU/////////////////////////////
 
+
 // MAIN PAGE CONTENT ////////////////////////
 .container {
     display: grid;
@@ -170,13 +175,54 @@ img.photo1 {
 }
 //END OF NAV MENU///////////////////////////////////////////////
 
+
+
 // MAIN PAGE CONTENT ///////////////////////////
 
-.container {
+.layout-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: auto;
 }
+.nav {
+    justify-self: end;
+    position: relative;
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 160px;
+        height: 100vh;
+        background-color: $color-beige;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .fa-bars {
+        font-size: 2rem;
+    }
+
+    .hamburger-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 28px;
+        height: 30px;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked {
+            ~ .menu {
+                 transform: none;
+            }
+            ~ .fa-bars:before {
+                content: '\f00d';
+            }
+        }
+    }
+}
+
 h3 {
     color: $color-beige;
     margin: 10px 20px 10px
@@ -187,32 +233,6 @@ p {
     align-items: center;
     color:red
 }
-
-.inside {
-    width: 100%;
-    height: 50px;
-}
-.menu-container {
-    background-image: url(/images/main.jpg);
-    background-size: cover;
-    background-position: center center;
-    opacity: .8;
-    width: 100%;
-   height: 380px;
-}
-
-.our-menu {
-    text-decoration: none;
-    margin-bottom: 30px;
-    color: $color-white;
-    line-height: 1.5rem;
-}
-.h2-end {
-    padding-top: 10px;
-}
-
-
-    
 
 h3.story {
     color: $color-beige;
@@ -272,99 +292,7 @@ img.female {
     }
 }
 
-// Header Dropdown //
-.menu-header {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: black;
-    color: whitesmoke;
-    font-family: 'Montserrat', sans-serif;
-    font-size: .9rem;
-    font-weight: 300;
-    height: 10vh;
-    line-height: normal;
-    padding: 10px 5px 10px;
-    width: auto;
-    text-align: center;    
-}
 
-.name {
-    color: #A51818;
-    font-weight: bold;
-    padding: 8px 15px 8px;
-    font-size: 18px;
-}
-
-.description {
-    padding: 8px 15px 8px;
-    font-size: 14px;
-}
-
-.price {
-    padding: 9px;
-    font-size: 14px;
-}
-.dropdown {
-    grid-column-start: 1;
-}
- .menu-logo {
-    width: 90px;
-}
-
-.dropdown {
-    font-family: 'Montserrat', sans-serif;
-}
-
-li {
-    padding: 1 1rem;
-    cursor: pointer;
-    width: 120px;
-    text-align: center;
-    position: relative;
-}
-
-.dropdown li:hover {
-    background-color: #D6BD94;
-}
-
-.dropdown > li {
-    display: inline-block;
-    padding: 0 1rem;
-    background-color:  #D6BD94;
-    position: relative;
-    // float: right;
-    cursor: pointer;
-    height: 30px;
-    line-height: 30px;
-    color: whitesmoke;
-}
-
-.dropdown > li:hover > ul {
-    display: block;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    background-color: $color-beige;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li > ul {
-    display: none;
-}
-
-li > ul > li > ul {
-    position: absolute;
-    left: 120px;
-    top: 0;
-}
-
-li > ul > li:hover ul {
-    display: block;
-}
 // Font Styles//
 body {
     background-color: $color-black;
@@ -376,7 +304,7 @@ body {
 .main-main{
     background-color: $color-black;
 }
-.menu-h3 {
+h3.menu-h3 {
     background-color: $color-black;
     font-size: 1.2rem;
     line-height: 1.4;
@@ -408,24 +336,4 @@ p {
     .food-menu-wrapper {
         grid-template-columns: repeat(6, 1fr);
     }
-}
-// ABOUT PAGE// /////////////////////
-.viedo {
-    width: 100%;
-}
-.chef {
-    width: 380px;
-    height: auto;
-    padding: 20px 20px;
-}
-
-.female {
-        width: 380px;
-        height: auto;
-        padding: 20px 20px;
-}
- .story {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.2;
-    color: whitesmoke;
 }

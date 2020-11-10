@@ -103,7 +103,7 @@ header .nav .hamburger-button:checked ~ .fa-bars:before {
 }
 
 main {
-  background-color: #D6BD94;
+  background-color: #000000;
 }
 
 footer {
@@ -132,11 +132,15 @@ footer {
         justify-self: center;
   }
   .layout-wrapper header .nav button {
-    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .layout-wrapper header .nav .menu {
     display: block;
     list-style-type: none;
+    padding-top: 40px;
+    line-height: 1.9rem;
   }
   .layout-wrapper header .nav .menu > li {
     margin: 0 1rem;
@@ -182,13 +186,57 @@ img.photo1 {
   width: 100%;
 }
 
-.container {
+.layout-wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+}
+
+.nav {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  position: relative;
+}
+
+.nav .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 100vh;
+  background-color: #D6BD94;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.nav .fa-bars {
+  font-size: 2rem;
+}
+
+.nav .hamburger-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav .hamburger-button:checked ~ .menu {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.nav .hamburger-button:checked ~ .fa-bars:before {
+  content: '\f00d';
 }
 
 h3 {
@@ -202,31 +250,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
   color: red;
-}
-
-.inside {
-  width: 100%;
-  height: 50px;
-}
-
-.menu-container {
-  background-image: url(/images/main.jpg);
-  background-size: cover;
-  background-position: center center;
-  opacity: .8;
-  width: 100%;
-  height: 380px;
-}
-
-.our-menu {
-  text-decoration: none;
-  margin-bottom: 30px;
-  color: #ffffff;
-  line-height: 1.5rem;
-}
-
-.h2-end {
-  padding-top: 10px;
 }
 
 h3.story {
@@ -289,103 +312,6 @@ iframe.video1 {
   font-size: 2rem;
 }
 
-.menu-header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-  background-color: black;
-  color: whitesmoke;
-  font-family: 'Montserrat', sans-serif;
-  font-size: .9rem;
-  font-weight: 300;
-  height: 10vh;
-  line-height: normal;
-  padding: 10px 5px 10px;
-  width: auto;
-  text-align: center;
-}
-
-.name {
-  color: #A51818;
-  font-weight: bold;
-  padding: 8px 15px 8px;
-  font-size: 18px;
-}
-
-.description {
-  padding: 8px 15px 8px;
-  font-size: 14px;
-}
-
-.price {
-  padding: 9px;
-  font-size: 14px;
-}
-
-.dropdown {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-}
-
-.menu-logo {
-  width: 90px;
-}
-
-.dropdown {
-  font-family: 'Montserrat', sans-serif;
-}
-
-li {
-  padding: 1 1rem;
-  cursor: pointer;
-  width: 120px;
-  text-align: center;
-  position: relative;
-}
-
-.dropdown li:hover {
-  background-color: #D6BD94;
-}
-
-.dropdown > li {
-  display: inline-block;
-  padding: 0 1rem;
-  background-color: #D6BD94;
-  position: relative;
-  cursor: pointer;
-  height: 30px;
-  line-height: 30px;
-  color: whitesmoke;
-}
-
-.dropdown > li:hover > ul {
-  display: block;
-  position: absolute;
-  top: 30px;
-  left: 0;
-  right: 0;
-  background-color: #D6BD94;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li > ul {
-  display: none;
-}
-
-li > ul > li > ul {
-  position: absolute;
-  left: 120px;
-  top: 0;
-}
-
-li > ul > li:hover ul {
-  display: block;
-}
-
 body {
   background-color: #000000;
   color: whitesmoke;
@@ -398,7 +324,7 @@ body {
   background-color: #000000;
 }
 
-.menu-h3 {
+h3.menu-h3 {
   background-color: #000000;
   font-size: 1.2rem;
   line-height: 1.4;
@@ -429,27 +355,5 @@ p {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
   }
-}
-
-.viedo {
-  width: 100%;
-}
-
-.chef {
-  width: 380px;
-  height: auto;
-  padding: 20px 20px;
-}
-
-.female {
-  width: 380px;
-  height: auto;
-  padding: 20px 20px;
-}
-
-.story {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.2;
-  color: whitesmoke;
 }
 /*# sourceMappingURL=style.css.map */
