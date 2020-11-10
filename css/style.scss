@@ -7,7 +7,7 @@ $color-white: #ffffff;
     padding: 0;
     box-sizing: border-box;
 }
-// START OF NAV BAR//
+// START OF NAV BAR///////////////////////////////////////
 .layout-wrapper {
     display: grid;
     grid-template-rows: 60px 1fr 40px;
@@ -69,14 +69,24 @@ header {
 }
      
 main {
-        background-color: $color-white;
+        background-color: $color-beige;
 }
 
 footer {
-    background-color: $color-white;            
+    display: grid;
+    grid-column-gap: 0;
+    background-color: black;
+    min-height: 10vh;
+    padding: 4vh;
+    color: whitesmoke;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;            
 }
 
-// BREAK POINT - TABLET//
+// BREAK POINT - TABLET////////////////////////////////////////////////
 @media only screen and (min-width: 768px) {
     .layout-wrapper header {
         .nav {
@@ -107,23 +117,28 @@ footer {
     }
 }
 
-// BREAKPOINT DESKTOP//
+// BREAKPOINT DESKTOP///////////////////////////////////////////////
 @media only screen and (min-width: 991px) {
     .food-menu-wrapper {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-// BREAKPOINT ULTRAWIDE //
+// BREAKPOINT ULTRAWIDE /////////////////////////////////////////////////
 @media only screen and (min-width: 1900px) {
     .food-menu-wrapper {
         grid-template-columns: repeat(6, 1fr);
     }
 }
-//END OF NAV MENU//
+//END OF NAV MENU///////////////////////////////////////////////
 
-// MAIN PAGE CONTENT //
+// MAIN PAGE CONTENT ///////////////////////////
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+}
 h3 {
     color: $color-beige;
     margin-top: 10px;
@@ -132,6 +147,7 @@ h3 {
 p {
     line-height: 1.2rem;
     align-items: center;
+    color:red
 }
 
 .inside {
@@ -150,7 +166,7 @@ p {
 .our-menu {
     text-decoration: none;
     margin-bottom: 30px;
-    color: $color-black;
+    color: $color-white;
     line-height: 1.5rem;
 }
 .h2-end {
@@ -331,24 +347,10 @@ p {
     line-height: 1.4;
     padding: 10px 20px 10px;
     text-align: center;
+    color: $color-white;
 }
 // BOTTOM OF MENU PAGE//
 
-
-// FOOTER//
-.footer {
-    display: grid;
-    grid-column-gap: 0;
-    background-color: black;
-    min-height: 10vh;
-    padding: 4vh;
-    color: whitesmoke;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-}
 
 // desktop
 @media only screen and (min-width: 991px) {

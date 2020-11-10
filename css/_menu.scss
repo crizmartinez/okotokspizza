@@ -1,0 +1,110 @@
+$color-beige: #D6BD94;
+$color-black: #000000;
+$color-white: #ffffff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.layout-wrapper {
+    display: grid;
+    grid-template-rows: 60px 1fr 40px;
+    min-height: 100vh;
+
+    > header {
+        background-color: $color-white;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        
+        .logo img {
+            height: 50px;
+        }
+
+        .phone {
+            justify-self: center;
+        }
+
+        .nav {
+            justify-self: center;
+        }
+        .menu {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 280px;
+            height: 100vh;
+            background-color: rgb(85, 65, 65);
+        }
+    }
+
+    > main {
+    background-color: $color-wine;
+    }
+
+    > footer {
+    background-color: $color-pink;
+    }
+}
+// -- TOP OF MENU PAGE-- ////////////////////////////////////////////////////////////////////////
+.food-menu-wrapper {
+    background-color: $color-black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.25rem;
+    padding: 0 20px;
+
+    > .item {
+        background-color: $color-beige;
+        color: black;
+        margin: 10px 20px 0;
+
+        > .image {
+            height: 230px;
+            background-size: cover;
+            background-position: center center;
+            
+            .name {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+// tablet
+@media only screen and (min-width: 768px) {
+   
+    .layout-wrapper header {
+        .nav {
+            order: 2;
+            justify-self: center;
+
+            button {
+                display: none;
+            }
+            .menu {
+                display: block;
+                list-style-type: none;
+                display: flex;
+                
+                >li {
+                    margin: 0 1rem;
+                }
+            }
+        }
+        .phone {
+            order: 3;
+            justify-self: end;
+        }
+    }
+    .food-menu-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+// desktop
+@media only screen and (min-width: 991px) {
+    .food-menu-wrapper {
+        grid-template-columns: repeat(4 1fr);
+    }
+}
